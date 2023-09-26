@@ -1,7 +1,6 @@
 resources:
-  - pod.yaml
-
+  - pv-pvc.yaml
+  - pod-prototype.yaml
 images:
-  - name: nginx
-    newName: nginx
-    newTag: 1.23.1
+  - name: 553149402753.dkr.ecr.ap-northeast-2.amazonaws.com/ecr-k3spod-prod-ethauto
+    newTag: v.1.1.1
