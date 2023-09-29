@@ -27,11 +27,6 @@ spec:
             - mountPath: "/home/output"
               name: task-pv-storage
             env:
-            - name: AWS_PROFILE
-              valueFrom:
-                secretKeyRef:
-                  name: aws-credential
-                  key: aws-profile
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
