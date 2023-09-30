@@ -3,4 +3,4 @@ resources:
   - pod-cronjob.yaml
 images:
   - name: 553149402753.dkr.ecr.ap-northeast-2.amazonaws.com/ecr-k3spod-prod-ethauto
-    newTag: v.1.1.4
+    newTag: v.1.1.5
