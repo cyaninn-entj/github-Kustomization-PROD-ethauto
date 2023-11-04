@@ -47,4 +47,4 @@ spec:
           - name: regcred
           restartPolicy: OnFailure
           nodeSelector:
-            node: worker01
+            node: master01
