@@ -3,6 +3,8 @@ kind: Pod
 metadata:
   name: dashboard-test
   namespace: prod-ethauto
+  labels:  # Add or modify labels here
+    app: dashboard-test  # Add this label
 spec:
   containers:
   - name: dashboard
