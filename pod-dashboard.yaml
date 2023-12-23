@@ -12,3 +12,17 @@ spec:
     - containerPort: 80
   imagePullSecrets:
   - name: regcred  # Secret for pulling from ECR
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard-service
+  namespace: prod-ethauto
+spec:
+  type: NodePort
+  selector:
+    app: dashboard-test  # Assuming the pod has a label "app: dashboard-test"
+  ports:
+  - port: 80  # Listen on port 80 of the service
+    targetPort: 80  # Forward to port 80 of the pod
+    nodePort: 30080  # Expose on a NodePort (can be any available port)
