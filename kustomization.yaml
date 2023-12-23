@@ -1,6 +1,9 @@
 resources:
   - pv-pvc.yaml
   - pod-cronjob.yaml
+  - pod-dashboard.yaml
 images:
-  - name: 553149402753.dkr.ecr.ap-northeast-2.amazonaws.com/ecr-k3spod-prod-ethauto
-    newTag: v.1.2.7 # have to modify this when deploying new version
+  - name: 553149402753.dkr.ecr.ap-northeast-2.amazonaws.com/ecr-k3spod-prod-ethauto  # Existing pod image
+    newTag: v.1.2.7  # Version control for the existing pod image
+  - name: 553149402753.dkr.ecr.ap-northeast-2.amazonaws.com/ecr-tradingdashboard-prod-ethauto  # Dashboard pod image
+    newTag: test  # Version control for the dashboard pod image

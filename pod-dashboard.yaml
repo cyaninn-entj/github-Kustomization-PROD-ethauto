@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dashboard-test
+  namespace: prod-ethauto
+spec:
+  containers:
+  - name: dashboard
+    image: 553149402753.dkr.ecr.ap-northeast-2.amazonaws.com/ecr-tradingdashboard-prod-ethauto  # Image with version tag
+    imagePullPolicy: Always
+    ports:
+    - containerPort: 80
+  imagePullSecrets:
+  - name: regcred  # Secret for pulling from ECR
